@@ -252,11 +252,11 @@ def main() -> None:
                                     if user_input.lower() == "n" or user_input.lower() == "exit":
                                         continue
                                     elif user_input.lower() == "y":
-                                        with open("./config/param_config.yaml", mode="wt", encoding="utf-8") as f:
-                                            yaml.safe_dump(services_params, f, encoding="utf-8")
+                                        with open("./config/param_config.yaml", mode="wt") as f:
+                                            yaml.safe_dump(services_params, f)
                                             f.close()
-                                        with open("./config/services_config.yaml", mode="wt", encoding="utf-8") as f:
-                                            yaml.safe_dump(services, f, encoding="utf-8")
+                                        with open("./config/services_config.yaml", mode="wt") as f:
+                                            yaml.safe_dump(services, f)
                                             f.close()
 
                                         print("")

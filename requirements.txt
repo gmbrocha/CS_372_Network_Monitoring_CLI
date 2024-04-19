@@ -1,0 +1,5 @@
+dnspython==2.6.1
+ntplib==0.4.0
+prompt_toolkit==3.0.43
+PyYAML==6.0.1
+Requests==2.31.0

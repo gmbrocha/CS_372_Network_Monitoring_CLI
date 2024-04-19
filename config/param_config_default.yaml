@@ -1,0 +1,38 @@
+DNS:
+  interval: 5
+  query: www.google.com
+  record_type: A
+  server: 8.8.8.8
+HTTP:
+  interval: 5
+  url: http://gaia.cs.umass.edu
+HTTPS:
+  interval: 5
+  timeout: 5
+  url: https://www.google.com
+NTP:
+  interval: 5
+  server: pool.ntp.org
+Ping:
+  host:
+  - 52.27.33.250
+  interval: 5
+  sequence_number: 1
+  timeout: 1
+  ttl: 64
+TCP:
+  interval: 5
+  ip_address: 127.0.0.1
+  port: 12345
+Traceroute:
+  host:
+  - 52.27.33.250
+  interval: 5
+  max_hops: 50
+  pings_per_hop: 1
+  verbose: true
+UDP:
+  interval: 5
+  ip_address: 127.0.0.1
+  port: 12346
+  timeout: 3

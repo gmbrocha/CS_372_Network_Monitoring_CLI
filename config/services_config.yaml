@@ -1,0 +1,9 @@
+DNS: true
+HTTP: true
+HTTPS: true
+ICMP: true
+NTP: true
+Ping: true
+TCP: true
+Traceroute: true
+UDP: true

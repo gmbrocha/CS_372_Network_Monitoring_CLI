@@ -274,13 +274,15 @@ def main() -> None:
 
                                     while services_edit:
 
-                                        print("\nServices available: HTTP, HTTPS, ICMP, DNS, NTP, TCP, UDP")
-                                        print("---------------------------------------------------------")
-                                        timestamped_print("Current services active: ", end=" ", flush=True)
+                                        print("\nServices available: Ping, Traceroute, "
+                                              "HTTP, HTTPS, ICMP, DNS, NTP, TCP, UDP")
+                                        print("----------------------------------------"
+                                              "-----------------------------------")
+                                        timestamped_print("Current services active:", end=" ", flush=True)
                                         i = 0
                                         for service in services:
                                             if services[service] is True and i != len(services) - 1:
-                                                print(service + ", ", end=" ", flush=True)
+                                                print(service + ",", end=" ", flush=True)
                                             elif services[service] is True and i == len(services) - 1:
                                                 print(service, flush=True)
                                             i += 1
@@ -446,7 +448,7 @@ def main() -> None:
                                     if user_service == "exit":
                                         continue
 
-                                    while user_service.upper() not in services_params:
+                                    while user_service not in services_params:
                                         user_service: str = session.prompt(
                                             "\nPlease enter a valid service. "
                                             "('exit' to return to config main menu): ")
@@ -465,9 +467,9 @@ def main() -> None:
                                         if user_interval == "exit":
                                             continue
 
-                                    services_params[user_service.upper()] = int(user_interval)
+                                    services_params[user_service]["interval"] = int(user_interval)
 
-                                    print("\n" + user_service + " interval updated to" + user_interval + "s.\n")
+                                    print("\n" + user_service + " interval updated to " + user_interval + "s.")
 
                     # START MONITORING
                     case "2":
